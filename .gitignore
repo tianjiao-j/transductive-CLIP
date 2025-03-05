@@ -13,5 +13,5 @@ __pycache__/
 */.ipynb_checkpoints/
 */*/.ipynb_checkpoints/
 .idea/
-results_zero_shot/
+results*/
 
