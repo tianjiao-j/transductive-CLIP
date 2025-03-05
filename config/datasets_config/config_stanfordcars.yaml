@@ -1,7 +1,7 @@
 DATA:
     dataset: 'stanfordcars'
     root: 'data'
-    dataset_path: 'data/stanfordcars/'
+    dataset_path: '../Tip-Adapter/data/stanford_cars/'
     num_classes_train: 196
     num_classes_test: 196
     

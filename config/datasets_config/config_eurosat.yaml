@@ -1,7 +1,7 @@
 DATA:
     dataset: 'eurosat'
     root: 'data'
-    dataset_path: 'data/eurosat/'
+    dataset_path: '../Tip-Adapter/data/eurosat/'
     num_classes_train: 10
     num_classes_test: 10
     

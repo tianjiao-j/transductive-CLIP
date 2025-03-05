@@ -1,7 +1,7 @@
 DATA:
     dataset: 'dtd'
     root: 'data'
-    dataset_path: 'data/dtd/'
+    dataset_path: '../Tip-Adapter/data/dtd/'
     num_classes_train: 47
     num_classes_test: 47
     

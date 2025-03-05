@@ -303,6 +303,7 @@ def extract_features_softmax(model, dataset, loader, set_name, args,
             os.mkdir('data/{}/saved_features/'.format(args.dataset))
         except:
             pass
+        os.makedirs('data/{}/saved_features/'.format(args.dataset), exist_ok=True)
         save_pickle(features_save_path, extracted_features_dic)
 
 

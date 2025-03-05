@@ -1,7 +1,7 @@
 DATA:
     dataset: 'fgvcaircraft'
     root: 'data'
-    dataset_path: 'data/fgvcaircraft/'
+    dataset_path: '../Tip-Adapter/data/fgvc_aircraft/'
     num_classes_train: 100
     num_classes_test: 100
     

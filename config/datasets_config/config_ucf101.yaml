@@ -1,7 +1,7 @@
 DATA:
     dataset: 'ucf101'
     root: 'data'
-    dataset_path: 'data/ucf101/'
+    dataset_path: '../Tip-Adapter/data/ucf101/'
     num_classes_train: 101
     num_classes_test: 101
     
