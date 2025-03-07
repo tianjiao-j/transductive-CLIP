@@ -24,7 +24,7 @@ NEW_CLASSNAMES = {
 class EuroSAT(DatasetBase):
 
     def __init__(self, root):
-        self.image_dir = os.path.join(root, 'images')
+        self.image_dir = os.path.join(root, '2750')
         self.split_path = os.path.join(root, 'split_zhou_EuroSAT.json')
 
         self.template = template

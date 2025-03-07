@@ -209,8 +209,9 @@ class ImageNet(DatasetBase):
 
         train = self.read_data(root, 'train.txt', 'train', classes_to_label)
         test = self.read_data(root, 'val.txt', 'val', classes_to_label)
+        val = self.read_data(root, 'val.txt', 'val', classes_to_label)
 
-        super().__init__(train_x=train, test=test)
+        super().__init__(train_x=train, test=test, val=val)
 
     def read_data(self, root, split_file, folder_name, classes_to_label):
         filepath = os.path.join(root, split_file)
@@ -224,7 +225,7 @@ class ImageNet(DatasetBase):
                 class_id = line[0].split('/')[0]
                 label = classes_to_label[class_id]
                 classname = imagenet_classes[label]
-                impath = os.path.join(root, folder_name, class_id, imname)
+                impath = os.path.join(self.image_dir, folder_name, class_id, imname)
                 item = Datum(
                     impath=impath,
                     label=label,

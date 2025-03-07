@@ -80,7 +80,7 @@ class Evaluator_few_shot:
         :param preprocess: Preprocessing function for data.
         :return: Dictionary of data loaders for train, val, and test.
         """
-        batch_size = 1024
+        batch_size = 1  #1024
         data_loaders = {
             'train': build_data_loader(data_source=dataset.train_x, batch_size=batch_size, is_train=False, shuffle=False, tfm=preprocess),
             'val': build_data_loader(data_source=dataset.val, batch_size=batch_size, is_train=False, shuffle=False, tfm=preprocess),
