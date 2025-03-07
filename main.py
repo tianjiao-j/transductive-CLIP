@@ -13,7 +13,7 @@ from src.eval_zero_shot import Evaluator_zero_shot
 
 torch.cuda.empty_cache()
 os.environ['CUDA_DEVICE_ORDER'] = 'PCI_BUS_ID'
-os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3'
 
 
 def parse_args() -> argparse.Namespace:
@@ -38,6 +38,7 @@ def parse_args() -> argparse.Namespace:
 def main():
     args = parse_args()
     device = torch.device("cuda" if args.cuda else "cpu")
+    device = torch.device('cpu')
 
     if args.seed is not None:
         random.seed(args.seed)
