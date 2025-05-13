@@ -39,6 +39,9 @@ def main():
     args = parse_args()
     device = torch.device("cuda" if args.cuda else "cpu")
     device = torch.device('cpu')
+    args.k_eff = args.num_classes_test
+    args.seed = 1
+    print(args)
 
     if args.seed is not None:
         random.seed(args.seed)
