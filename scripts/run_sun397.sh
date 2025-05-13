@@ -1,4 +1,4 @@
-export CUDA_VISIBLE_DEVICES=0
+export CUDA_VISIBLE_DEVICES=1
 
 use_softmax_features=True
 method='em_dirichlet'
@@ -13,11 +13,11 @@ method='em_dirichlet'
 #   done
 # done
 
-for dataset in stanfordcars
+for dataset in sun397
 do
   #python main.py --opts batch_size 1 number_tasks 1 dataset ${dataset} shots 0 use_softmax_features ${use_softmax_features} method ${method} use_features True
-  for shot in 16 
+  for shot in 16 8 4 2 1
   do
-  python main.py --opts shots ${shot} dataset ${dataset} batch_size 50 number_tasks 1000 use_softmax_feature True backbone RN50 method ${method}
+  python main.py --opts shots ${shot} dataset ${dataset} batch_size 10 number_tasks 1000 use_softmax_feature True backbone RN50 method ${method}
   done
 done
